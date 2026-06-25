@@ -1,0 +1,163 @@
+body {
+  background: #0f172a;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+.bookings-page {
+  padding: 60px 8%;
+  min-height: 100vh;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.top-bar h1 {
+  font-size: 48px;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: white;
+  background: #1e293b;
+  padding: 14px 22px;
+  border-radius: 14px;
+}
+
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.booking-card {
+  background: #1e293b;
+  border-radius: 28px;
+  padding: 30px;
+  transition: 0.3s;
+  border: 1px solid #334155;
+}
+
+.booking-card:hover {
+  transform: translateY(-6px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-top span {
+  background: #22c55e;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.route {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.booking-info p {
+  color: #cbd5e1;
+}
+
+.booking-info strong {
+  color: white;
+}
+
+.booking-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.delete-booking-btn {
+  background: #ef4444;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.delete-booking-btn:hover {
+  background: #dc2626;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 700px) {
+  .bookings-page {
+    padding: 30px 5%;
+  }
+
+  .booking-card {
+    padding: 25px;
+  }
+
+  .card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .route {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .booking-info p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  footer{
+    padding: 50px 5%;
+  }
+
+  footer h3{
+    font-size: 28px;
+  }
+}
+@media (max-width: 700px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .top-bar h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .top-bar a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bookings-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .booking-card {
+    border-radius: 22px;
+  }
+}

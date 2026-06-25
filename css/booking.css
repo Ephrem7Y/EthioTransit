@@ -1,0 +1,288 @@
+body {
+  background: #0f172a;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+.booking-page {
+  min-height: 100vh;
+  padding: 60px 8%;
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.left-side,
+.right-side {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 30px;
+  padding: 40px;
+  backdrop-filter: blur(20px);
+}
+
+.left-side h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.left-side p {
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+.seat-legend {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.seat-legend div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.available-box {
+  background: #1e293b;
+}
+
+.selected-box {
+  background: #22c55e;
+}
+
+.booked-box {
+  background: #64748b;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.aisle {
+  width: 20px;
+}
+
+.seat {
+  width: 58px;
+  height: 58px;
+  background: #1e293b;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.seat:hover {
+  transform: translateY(-3px);
+}
+
+.selected {
+  background: #22c55e;
+}
+
+.booked {
+  background: #64748b;
+  cursor: not-allowed;
+}
+
+.summary-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #334155;
+}
+
+.summary-row span {
+  color: #94a3b8;
+}
+
+.total-row h2 {
+  color: #22c55e;
+}
+
+.passenger-input {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  background: #f1f5f9;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.seat-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.seat-group {
+  display: flex;
+  gap: 14px;
+}
+
+.aisle-space {
+  width: 70px;
+}
+
+.back-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+  .booking-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 12px 20px;
+  background: #1e293b;
+  color: white;
+  text-decoration: none;
+  border-radius: 14px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  background: #22c55e;
+}
+@media (max-width: 700px) {
+  .booking-page {
+    padding: 28px 16px 40px;
+  }
+
+  .back-button {
+    margin-bottom: 18px;
+  }
+
+  .booking-container {
+    gap: 24px;
+  }
+
+  .left-side,
+  .right-side {
+    padding: 24px 16px;
+    border-radius: 22px;
+  }
+
+  .left-side h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .seat-legend {
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .seat-layout {
+    gap: 14px;
+    margin-top: 26px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .seat-row {
+    justify-content: flex-start;
+    gap: 14px;
+    min-width: max-content;
+  }
+
+  .seat-group,
+  .back-row {
+    gap: 10px;
+  }
+
+  .aisle-space {
+    width: 28px;
+  }
+
+  .seat {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  .back-row {
+    justify-content: flex-start;
+    min-width: max-content;
+    margin-top: 18px;
+  }
+
+  .right-side h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .summary-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .summary-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .summary-row h3 {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+}

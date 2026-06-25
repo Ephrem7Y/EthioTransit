@@ -1,0 +1,80 @@
+.results-header {
+  padding: 50px 8%;
+}
+
+.filter-box {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.filter-box input,
+.filter-box select {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+.results-container {
+  padding: 80px 8%;
+}
+
+.bus-card {
+  display: flex;
+  margin-bottom: 30px;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bus-card img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.bus-info,
+.price-box {
+  padding: 30px;
+}
+
+.price-box {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.price-box button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #22c55e;
+  color: white;
+  transition: 0.3s;
+}
+
+.price-box button:hover {
+  transform: translateY(-3px);
+}
+
+.hover-card {
+  transition: 0.4s;
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 900px) {
+  .bus-card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .bus-card img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,376 @@
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.navbar {
+  transition: 0.4s;
+  padding: 22px 8%;
+}
+
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  position: relative;
+  font-weight: 500;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 2px;
+  background: #22c55e;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+.menu-toggle {
+  display: none;
+  font-size: 34px;
+  color: white;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.close-menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 18px 6%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: #0f172a;
+    z-index: 2000;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  .close-menu {
+    display: block;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 20px;
+  }
+
+  .mobile-buttons {
+    margin-top: 40px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mobile-buttons a {
+    width: 100%;
+  }
+
+  .mobile-buttons button {
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 120px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    padding: 40px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .hero-badge {
+    font-size: 13px;
+  }
+
+  .search-box {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+
+  .search-box button {
+    margin-top: 10px;
+  }
+}
+
+.btn-primary {
+  background: #22c55e;
+  color: white;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #0f172a;
+}
+
+.popular-hero {
+  height: 60vh;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2200&auto=format&fit=crop")
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.hero-content span {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 10px 18px;
+  border-radius: 30px;
+}
+
+.hero-content h1 {
+  font-size: 72px;
+  margin: 20px 0;
+}
+
+.hero-content p {
+  color: #cbd5e1;
+  font-size: 18px;
+}
+
+.routes-section {
+  padding: 100px 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.route-card {
+  background: white;
+  border-radius: 35px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  transition: 0.4s;
+}
+
+.route-card:hover {
+  transform: translateY(-10px);
+}
+
+.route-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.route-info {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.route-info h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.route-info p {
+  color: #64748b;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.route-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.route-stats span {
+  background: #22c55e;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 30px;
+}
+
+.route-info button {
+  width: max-content;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.route-info button:hover {
+  transform: translateY(-4px);
+}
+
+.reverse img {
+  order: 2;
+}
+
+footer {
+  background: #0f172a;
+  color: white;
+  padding: 60px;
+  text-align: center;
+}
+
+footer h3 {
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 950px) {
+  .route-card {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse img {
+    order: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .route-info {
+    padding: 40px;
+  }
+
+  .route-info h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1,
+  .support-content h1 {
+    font-size: 38px !important;
+    line-height: 1.2;
+  }
+
+  .hero-content p,
+  .support-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+  .route-info {
+    padding: 30px;
+  }
+
+  .route-info h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .route-stats {
+    gap: 10px;
+  }
+
+  .route-stats span {
+    font-size: 13px;
+  }
+
+  .route-info button {
+    width: 100%;
+  }
+
+  footer {
+    padding: 50px 5%;
+  }
+
+  footer h3 {
+    font-size: 28px;
+  }
+}

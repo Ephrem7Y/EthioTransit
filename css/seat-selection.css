@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+.top-bar {
+  width: 100%;
+  padding: 30px 8% 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #22c55e;
+  transform: translateX(-3px);
+}
+
+.seat-page {
+  padding: 50px 8%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.legend {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+}
+
+.available {
+  border: 2px solid #22c55e;
+}
+
+.selected {
+  background: #22c55e;
+}
+
+.occupied {
+  background: #475569;
+}
+
+.bus-layout {
+  background: #1e293b;
+  border-radius: 30px;
+  padding: 40px;
+}
+
+.driver {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 22px;
+  color: #22c55e;
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.seat {
+  height: 65px;
+  border: 2px solid #22c55e;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.seat:hover {
+  transform: scale(1.08);
+}
+
+.seat.selected-seat {
+  background: #22c55e;
+}
+
+.seat.occupied-seat {
+  background: #475569;
+  border: none;
+  cursor: not-allowed;
+}
+
+.summary-panel {
+  background: #1e293b;
+  border-radius: 30px;
+  padding: 30px;
+  height: fit-content;
+  position: sticky;
+  top: 30px;
+}
+
+.summary-box {
+  margin-top: 25px;
+}
+
+.summary-item {
+  margin-bottom: 25px;
+}
+
+.summary-item small {
+  color: #94a3b8;
+}
+
+.seat-summary-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.selected-seat-tag {
+  background: #22c55e;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.total {
+  margin-top: 35px;
+}
+
+.continue-btn {
+  width: 100%;
+  margin-top: 40px;
+  padding: 18px;
+  border: none;
+  border-radius: 16px;
+  background: #22c55e;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.continue-btn:hover {
+  transform: translateY(-4px);
+}
+
+hr {
+  border: 1px solid #334155;
+  margin: 25px 0;
+}
+
+@media (max-width: 1000px) {
+  .seat-page {
+    grid-template-columns: 1fr;
+  }
+}
